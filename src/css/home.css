@@ -1,0 +1,113 @@
+.home {
+  /* Use global bg-dark but add a subtle gradient for depth */
+  background: radial-gradient(circle at top center, #1e1e1e 0%, var(--bg-dark) 40%);
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* Search Area */
+.search-form {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 50px;
+  /* Pill shape */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-form:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.search-button {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  /* Pill shape */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #f40612;
+  /* Slightly brighter on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  /* Responsive grid using auto-fill */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.loading {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.error-message {
+  color: #ff4757;
+  text-align: center;
+  background: rgba(255, 71, 87, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 600px) {
+  .search-form {
+    border-radius: 16px;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    gap: 1rem;
+  }
+
+  .search-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  .search-button {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
