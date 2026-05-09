@@ -15,3 +15,27 @@ export const searchMovies = async (query) => {
     const data = await responce.json();
     return data.results;
 };
+
+export const getMovieVideos = async (id) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`
+  );
+
+  return res.json();
+};
+
+export const getMovieDetails = async (id) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}`
+  );
+
+  return res.json();
+};
+
+export const getMovieCredits = async (id) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`
+  );
+
+  return res.json();
+};
