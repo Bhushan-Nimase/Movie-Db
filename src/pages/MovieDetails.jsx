@@ -4,7 +4,7 @@ import { ArrowLeft, Star, Calendar, Clock, Plus, Check } from 'lucide-react';
 import { useMovieContext } from '../contexts/MovieContext';
 import { fetchMovieDetail, GENRE_MAP } from '../services/api';
 import { getBackdropUrl, getPosterUrl } from '../utils/images';
-import MovieCard from '../components/MovieCard';
+import MovieCard from "../components/MovieCard";
 
 const NAV_H = 64;
 

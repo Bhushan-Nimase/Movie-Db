@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import HeroCarousel from '../components/Hero';
-import MovieCard    from '../components/MovieCard';
-import MyListRow    from '../components/MyList';
+import MovieCard from "../components/MovieCard";
+import HeroCarousel from "../components/Hero";
+import MyListRow from "../components/MyList";
 import SkeletonGrid from '../components/SkeletonGrid';
 import { fetchTrending, fetchPopular } from '../services/api';
 

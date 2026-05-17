@@ -1,4 +1,5 @@
-const API_KEY = "7228b7e3d72422f453b6337ef7072771";
+//const API_KEY = "7228b7e3d72422f453b6337ef7072771";
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE    = "https://api.themoviedb.org/3";
 
 // ── Popular movies ─────────────────────────────────────────────────

@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MovieProvider } from './contexts/MovieContext';
-import NavBar from './Components/NavBar';
-import Cursor from './Components/Cursor';
-import Home from './pages/home';
-import MovieDetails from './pages/MovieDetails';
-import Favorites from './pages/favorites';
+import NavBar from "./components/NavBar";
+import Cursor from "./components/Cursor";
+import Home from "./pages/Home";
+import MovieDetails from "./pages/MovieDetails";
+import Favorites from "./pages/Favorites";
 import './css/index.css';
 
 export default function App() {
