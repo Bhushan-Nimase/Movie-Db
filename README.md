@@ -156,15 +156,6 @@ npm run preview  # Preview prod build locally
 
 ---
 
-## 🔮 Roadmap
-
-- [ ] Trailer player (YouTube embed)
-- [ ] Genre filter tabs
-- [ ] Infinite scroll / pagination
-- [ ] Movie recommendations on detail page
-- [ ] PWA — install as mobile app
-
----
 
 ## 📄 License
 
