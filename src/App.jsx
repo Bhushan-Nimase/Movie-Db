@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MovieProvider } from './contexts/MovieContext';
-import NavBar from './components/NavBar';
-import Cursor from './components/Cursor';
+import NavBar from './Components/NavBar';
+import Cursor from './Components/Cursor';
 import Home from './pages/Home';
 import MovieDetails from './pages/MovieDetails';
 import Favorites from './pages/Favorites';
