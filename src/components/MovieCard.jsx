@@ -30,8 +30,8 @@ export default function MovieCard({ movie, index }) {
       style={{ cursor: 'pointer' }}
     >
       <style>{`
-        .movie-card .poster-img { filter: grayscale(85%) contrast(1.04); transition: filter 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .movie-card:hover .poster-img { filter: grayscale(0%) contrast(1); transform: scale(1.07); }
+        .movie-card .poster-img { opacity: 0.95; transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .movie-card:hover .poster-img { opacity: 1; transform: scale(1.06); }
         .movie-card .card-title-rule { transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.34,1.3,0.64,1); }
         .movie-card:hover .card-title-rule { transform: scaleX(1); }
         .movie-card .poster-frame { border-color: var(--rule); transition: border-color 0.25s, box-shadow 0.3s; }

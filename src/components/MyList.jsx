@@ -1,4 +1,4 @@
-import { useNavigate } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMovieContext } from '../contexts/MovieContext';
 import { getPosterUrl } from '../utils/images';
 import { X } from 'lucide-react';
@@ -31,8 +31,8 @@ export default function MyListRow() {
         .mylist-scroll::-webkit-scrollbar { height: 3px; }
         .mylist-scroll::-webkit-scrollbar-thumb { background: var(--rule-strong); }
         .mylist-item-wrap:hover .mylist-rm { opacity: 1 !important; }
-        .mylist-item-wrap .mylist-poster { filter: grayscale(85%); transition: filter 0.5s; }
-        .mylist-item-wrap:hover .mylist-poster { filter: grayscale(0%); }
+        .mylist-item-wrap .mylist-poster { opacity: 0.9; transition: opacity 0.3s, transform 0.3s; }
+        .mylist-item-wrap:hover .mylist-poster { opacity: 1; transform: scale(1.03); }
         .mylist-item-wrap:hover .mylist-frame { border-color: var(--ink); }
       `}</style>
 

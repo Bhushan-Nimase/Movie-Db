@@ -9,6 +9,17 @@ export default function RevealItem({ children, delay = 0 }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Safety fallback: guarantee visibility after brief delay even if IntersectionObserver is delayed or missed
+    const fallbackTimer = setTimeout(() => {
+      setVisible(true);
+    }, delay + 180);
+
+    if (!('IntersectionObserver' in window)) {
+      setVisible(true);
+      return () => clearTimeout(fallbackTimer);
+    }
+
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -17,10 +28,14 @@ export default function RevealItem({ children, delay = 0 }) {
           return () => clearTimeout(t);
         }
       },
-      { threshold: 0.12, rootMargin: '80px' }
+      { threshold: 0.01, rootMargin: '300px' }
     );
     io.observe(el);
-    return () => io.disconnect();
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      io.disconnect();
+    };
   }, [delay]);
 
   return (

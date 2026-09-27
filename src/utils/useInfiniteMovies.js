@@ -64,7 +64,7 @@ export default function useInfiniteMovies(fetchPage, resetKey) {
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [loadMore]);
+  }, [loadMore, items.length]);
 
   return { items, loading, error, sentinelRef };
 }

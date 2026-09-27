@@ -195,7 +195,7 @@ export default function HeroCarousel({ movies }) {
           <img
             src={getBackdropUrl(movie)}
             alt={movie.title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(15%) contrast(1.05)' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
       </div>
